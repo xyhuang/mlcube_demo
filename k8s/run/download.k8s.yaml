@@ -1,0 +1,16 @@
+schema_type: mlcube_invoke
+schema_version: 1.0.0
+
+task_name: download
+
+input_binding: {}
+
+output_binding:
+  data_dir:
+    path: data
+    k8s:
+      pvc: mlcube-workspace
+  log_dir:
+    path: download_logs
+    k8s:
+      pvc: mlcube-workspace

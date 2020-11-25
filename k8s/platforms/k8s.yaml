@@ -1,0 +1,8 @@
+schema_type: mlcommons_box_platform
+schema_version: 0.1.0
+
+platform:
+  name: "k8s"
+  version: ">=1.13.0"
+container:
+  image: "mlperf/mlbox:sciml_em_denoise"

@@ -1,0 +1,28 @@
+schema_type: mlcube_invoke
+schema_version: 1.0.0
+
+task_name: test
+
+input_binding:
+  data_dir:
+    path: data
+    k8s:
+      pvc: mlcube-workspace
+  model_dir:
+    path: model
+    k8s:
+      pvc: mlcube-workspace
+  parameters_file:
+    path: parameters/default.parameters.yaml
+    k8s:
+      pvc: mlcube-workspace
+
+output_binding:
+  log_dir:
+    path: test_logs
+    k8s:
+      pvc: mlcube-workspace
+  output_dir:
+    path: output
+    k8s:
+      pvc: mlcube-workspace

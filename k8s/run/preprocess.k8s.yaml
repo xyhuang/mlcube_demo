@@ -1,0 +1,20 @@
+schema_type: mlcube_invoke
+schema_version: 1.0.0
+
+task_name: preprocess
+
+input_binding:
+  data_dir:
+    path: data
+    k8s:
+      pvc: mlcube-workspace
+
+output_binding:
+  data_dir:
+    path: data
+    k8s:
+      pvc: mlcube-workspace
+  log_dir:
+    path: preprocess_logs
+    k8s:
+      pvc: mlcube-workspace
